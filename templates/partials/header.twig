@@ -1,0 +1,47 @@
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
+<div id="overlayer"></div>
+<div class="loader">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Подождите....</span>
+    </div>
+</div>
+<div class="lines-wrap">
+    <div class="lines-inner">
+        <div class="lines"></div>
+    </div>
+</div>
+
+{{ include('partials/form.twig') }}
+
+<div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+            <span class="icofont-close js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+<nav class="site-nav dark js-site-navbar mb-5 site-navbar-target">
+    <div class="container">
+        <div class="site-navigation">
+            <a href="{{ absolute_url('/') }}" class="logo m-0 float-left">
+                <img src="{{ absolute_url(asset('assets/images/logo.png')) }}" alt="main logo">
+            </a>
+            <ul class="js-clone-nav d-none d-lg-inline-block site-menu float-left">
+                <li class="active"><a href="{{ absolute_url('/') }}" class="nav-link">Главная</a></li>
+                <li><a href="{{ absolute_url('/prices') }}" class="nav-link">Тарифные планы и цены</a></li>
+                <li><a href="{{ absolute_url('/features') }}" class="nav-link">Наши возможности</a></li>
+                <li><a href="{{ absolute_url('/abouts') }}" class="nav-link">О нас</a></li>
+                <li><a href="{{ absolute_url('/contacts') }}" class="nav-link">Контакты</a></li>
+            </ul>
+            <ul class="js-clone-nav d-none mt-1 d-lg-inline-block site-menu float-right">
+                <li class="cta-button-outline"><a href="#" id="login">Войти</a></li>
+                <li class="cta-primary"><a href="#">Регистрация</a></li>
+            </ul>
+            <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block dark d-lg-none"
+               data-toggle="collapse" data-target="#main-navbar">
+                <span></span>
+            </a>
+        </div>
+    </div>
+</nav>

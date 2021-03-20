@@ -1,0 +1,15 @@
+index:
+    path: /
+    controller: App\Controller\MainPageController::index
+
+prices:
+    path: /prices
+    controller: App\Controller\MainPageController::prices
+
+abouts:
+    path: /abouts
+    controller: App\Controller\MainPageController::abouts
+
+contacts:
+    path: /contacts
+    controller: App\Controller\MainPageController::contacts
